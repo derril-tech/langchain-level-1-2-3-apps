@@ -53,4 +53,12 @@ python main.py
 | 10 | LangServe Deployment Demo           | [📄 README](level-1/10-langserve-deployment/README.md)    |
 
 
+## 🛠️ Local Setup Instructions
+
+### 1. Clone the Repo
+
+```bash
+git clone https://github.com/derril-tech/langchain-level-1-apps.git
+cd langchain-level-1-apps
+```
 
