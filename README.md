@@ -76,4 +76,12 @@ Make sure your virtual environment is activated, then run:
 pip install -r requirements.txt
 ```
 
+### 4. Run a Specific Project
+
+Navigate into any project directory and run its main Python script:
+
+```bash
+cd level-1/01-chatbot-memory
+python main.py
+```
 
