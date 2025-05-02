@@ -61,4 +61,11 @@ python main.py
 git clone https://github.com/derril-tech/langchain-level-1-apps.git
 cd langchain-level-1-apps
 ```
+### 2. Create Virtual Environment
+
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
 
