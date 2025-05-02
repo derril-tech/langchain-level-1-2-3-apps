@@ -84,4 +84,19 @@ Navigate into any project directory and run its main Python script:
 cd level-1/01-chatbot-memory
 python main.py
 ```
+## 🙋‍♂️ Author
+
+**Derril Filemon**
+
+- 🔗 [LinkedIn](https://www.linkedin.com/in/derril-filemon-a31715319)
+- 🧑‍💻 [GitHub](https://github.com/derril-tech)
+
+---
+
+## 📌 Coming Soon
+
+Stay tuned for:
+
+- 🧩 **Level 2 Projects** – LangChain + UI/API integrations  
+- 🧠 **Level 3 Projects** – Multi-agent systems and production-ready workflows
 
