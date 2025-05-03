@@ -1,0 +1,17 @@
+# Poetry virtual environment (in-project or global)
+.venv/
+
+# Environment variables
+.env
+
+# Bytecode & cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Jupyter checkpoint files (if using notebooks)
+.ipynb_checkpoints/
+
+# macOS and system files
+.DS_Store
+Thumbs.db

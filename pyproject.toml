@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "LANGCHAIN-LEVEL-1-APPS"
+version = "0.1.0"
+description = ""
+authors = ["derril filemon <derril.tech@gmail.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "3.11.4"
+jupyterlab = "^4.2.4"
+langchain = "^0.2.10"
+langchain-openai = "^0.1.17"
+langchain-groq = "^0.1.6"
+python-dotenv = "^1.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
