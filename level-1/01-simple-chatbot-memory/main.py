@@ -11,7 +11,8 @@ openai_api_key = os.environ["OPENAI_API_KEY"]
 
 from langchain_openai import ChatOpenAI
 
-chatbot = ChatOpenAI(model="gpt-3.5-turbo")
+chatbot = ChatOpenAI(model="gpt-4-turbo")
+
 
 from langchain_core.messages import HumanMessage
 
