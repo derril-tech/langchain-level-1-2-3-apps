@@ -1,0 +1,8 @@
+{
+  "python.defaultInterpreterPath": "C:/Users/User/AppData/Local/pypoetry/Cache/virtualenvs/langchain-level-1-apps-6yKmFL7j-py3.11/Scripts/python.exe",
+  "python.analysis.extraPaths": [],
+  "python.terminal.activateEnvironment": true,
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.pylintArgs": ["--disable=C0114,C0115,C0116"]
+}
