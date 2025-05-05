@@ -41,10 +41,10 @@ print(response.content)
 print("\n----------\n")
 
 # --- PART 2: Stateful Chat using LangChain Memory ---
-# Imports for memory, prompts, and chain setup
-from langchain.chains import LLMChain
-from langchain_core.prompts import ChatPromptTemplate, HumanMessagePromptTemplate, MessagesPlaceholder
-from langchain.memory import ConversationBufferMemory, FileChatMessageHistory
+# Import core components for creating a memory-enabled chain
+from langchain.chains import LLMChain  # Main abstraction that combines LLM, prompt, and memory into a single callable object
+from langchain_core.prompts import ChatPromptTemplate, HumanMessagePromptTemplate, MessagesPlaceholder  # Used to structure the messages and memory into a reusable prompt format
+from langchain.memory import ConversationBufferMemory, FileChatMessageHistory  # Implements memory for the chat; uses a file-based history so that memory persists between runs
 
 # Create a memory object to store conversation history
 memory = ConversationBufferMemory(
@@ -77,9 +77,9 @@ print("\n----------\n")
 print(response)
 print("\n----------\n")
 
-response = chain.invoke("my name is Derril")
+response = chain.invoke("my name is Julio")
 print("\n----------\n")
-print("my name is Derril")
+print("my name is Julio")
 print("\n----------\n")
 print(response)
 print("\n----------\n")
@@ -93,7 +93,7 @@ print("\n----------\n")
 
 """
 ==============================
-📝 Notes
+📝 Beginner's Notes (Tutorial Style)
 ==============================
 
 1. ChatOpenAI (LangChain's wrapper around OpenAI Chat models)
