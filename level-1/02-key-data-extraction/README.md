@@ -20,7 +20,7 @@ Extract structured data (like names, emails, or keywords) from unstructured text
 Make sure your virtual environment is activated and dependencies are installed.
 
 ```bash
-cd level-1/02-data-extraction
+cd level-1/02-key-data-extraction
 python main.py
 ```
 

@@ -12,7 +12,7 @@ openai_api_key = os.environ["OPENAI_API_KEY"]
 
 # Import and initialize the ChatOpenAI model (GPT-4 Turbo)
 from langchain_openai import ChatOpenAI
-chatbot = ChatOpenAI(model="gpt-4-turbo")
+chatbot = ChatOpenAI(model="gpt-4o-2024-08-06")
 
 # --- PART 1: Stateless Chat ---
 # This is a simple chat without memory (no context retention)
