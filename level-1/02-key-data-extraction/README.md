@@ -1,34 +1,72 @@
-# 📦 Data Extraction Tool
+# 🧠 02 - Data Extraction with LangChain
 
-## 📘 Description
+This Level 1 LangChain app demonstrates how to extract structured information (like name, lastname, and country) from unstructured text using LangChain, OpenAI, and Pydantic v2.
 
-Extract structured data (like names, emails, or keywords) from unstructured text using LangChain and large language models.
+No frontend, no backend — just pure LangChain + OpenAI via Python.
 
 ---
 
-## 🧠 LangChain Concepts Used
+## 🧩 Concepts Used
 
-- PromptTemplate
-- LLMChain
-- OutputParser
-- DocumentLoader (if using document input)
+- **ChatOpenAI** (`gpt-4o-2024-08-06`)
+- **Pydantic v2** models for structured output
+- **ChatPromptTemplate**
+- **Structured Output Parsing**
+- **LangChain Chain Composability**
 
 ---
 
 ## ▶️ How to Run
 
-Make sure your virtual environment is activated and dependencies are installed.
+1. Clone the repo and navigate into the project:
+
+   ```bash
+   cd level-1/02-key-data-extraction
+   ```
+
+````
+
+## 🔐 Setup Your OpenAI Key
+
+Create a `.env` file and add your OpenAI API key:
+
+```env
+OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxx
+````
+
+## ▶️ Run the Extraction app
 
 ```bash
-cd level-1/02-key-data-extraction
 python main.py
 ```
 
 ---
 
-## 🔧 Setup Notes
+## 🛠️ Setup Notes
 
-This project is part of the [LangChain Level 1 Apps](../../README.md).  
+This project is part of the **LangChain Level 1 Apps Collection**.
+
+It runs on:
+
+- **Python 3.11**
+- **LangChain v0.3+**
+- **Pydantic v2**
+
+All dependencies are frozen in requirements.txt.
+
+This app demonstrates how to extract structured data from user reviews or long-form text.
+
+This project is part of the [LangChain Level 1 Apps](../../README.md).
 No frontend or backend — just pure LangChain and Python.
 
 ---
+
+## 📁 File Structure
+
+```text
+main.py             # Entry point with entity extraction logic
+.env                # OpenAI key (not committed to version control)
+README.md           # You’re reading it
+requirements.txt    # All dependencies listed
+
+```

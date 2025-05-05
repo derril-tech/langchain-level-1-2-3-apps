@@ -1,32 +1,59 @@
-# 📦 Sentiment & Political Bias Analyzer
+# 🧠 02 - Sentiment Analyzer with Structured Output
 
-## 📘 Description
+This Level 1 LangChain app uses OpenAI + LangChain to classify text by **sentiment**, **political tendency**, and **language** — all extracted as structured JSON using a Pydantic schema.
 
-Analyze the sentiment (positive/negative) and political bias (left/center/right) of text using LangChain and LLMs.
+No frontend, no backend — just pure LangChain, OpenAI, and Python.
 
 ---
 
-## 🧠 LangChain Concepts Used
+## 🧩 Concepts Used
 
-- PromptTemplate
-- LLMChain
-- Output Parsing
-- Zero-shot classification
+- **ChatOpenAI** (gpt-4o-2024-08-06)
+- **ChatPromptTemplate**
+- **Pydantic v2 (BaseModel, Literal)**
+- **Structured Output**
+- **LangChain Expression Language (Pipe Operator `|`)**
 
 ---
 
 ## ▶️ How to Run
 
-Make sure your virtual environment is activated and dependencies are installed.
+1. Clone the repo and navigate into the project:
 
 ```bash
 cd level-1/03-sentiment-bias-analyzer
 python main.py
 ```
 
+## 🔐 Setup Your OpenAI Key
+
+Create a `.env` file and add your OpenAI API key:
+
+```env
+OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxx
+```
+
+## ▶️ Run the Extraction app
+
+```bash
+python main.py
+```
+
 ---
 
-## 🔧 Setup Notes
+## 🛠️ Setup Notes
+
+This project is part of the **LangChain Level 1 Apps Collection**.
+
+It runs on:
+
+- **Python 3.11**
+- **LangChain v0.3+**
+- **Pydantic v2**
+- **OpenAI's GPT-4o model**
+
+All dependencies are frozen in requirements.txt.
+This app demonstrates how to extract structured data from user reviews or long-form text.
 
 This project is part of the [LangChain Level 1 Apps](../../README.md).
 No frontend or backend — just pure LangChain and Python.
