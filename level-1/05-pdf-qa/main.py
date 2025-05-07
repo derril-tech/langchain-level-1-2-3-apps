@@ -110,7 +110,7 @@ print("\n----------\n")
    We start by securely loading our OpenAI API key using a `.env` file. This allows us to avoid hardcoding secrets.
 
 2. LANGUAGE MODEL:
-   We initialize `ChatOpenAI` with a specific model (`gpt-3.5-turbo-0125`). This is the brain behind the assistant.
+   We initialize `ChatOpenAI` with a specific model (`gpt-4o-2024-08-06`). This is the brain behind the assistant.
 
 3. DOCUMENT LOADING:
    We load a PDF using `PyPDFLoader`, which breaks it into LangChain Document objects containing both text and metadata.

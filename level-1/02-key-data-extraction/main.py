@@ -98,7 +98,7 @@ print("\n----------\n")
    - This keeps sensitive data like API keys out of your source code.
 
 2. **LLM Configuration**
-   - We load OpenAI’s `gpt-3.5-turbo-0125` model using the LangChain `ChatOpenAI` wrapper.
+   - We load OpenAI’s `gpt-4o-2024-08-06` model using the LangChain `ChatOpenAI` wrapper.
 
 3. **Schema Definition**
    - We use Pydantic models (`BaseModel`) to define what data we want to extract.
