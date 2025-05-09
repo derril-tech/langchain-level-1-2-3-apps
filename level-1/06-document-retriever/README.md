@@ -42,7 +42,7 @@ OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ---
 
-## ▶️ Run the Chatbot
+## ▶️ Run the Script
 
 Once everything is set up, run the script using:
 
