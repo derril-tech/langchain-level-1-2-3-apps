@@ -99,16 +99,25 @@ if len(draft_input.split(" ")) > 700:
 # Get tone and dialect preferences
 # ---------------------
 col3, col4 = st.columns(2)
+
 with col3:
     option_tone = st.selectbox(
         'Which tone would you like your redaction to have?',
-        ('Formal', 'Informal')
+        (
+            'Formal',
+            'Informal',
+            'Humorous',
+            'Persuasive',
+            'Empathetic'
+        )
     )
+
 with col4:
     option_dialect = st.selectbox(
         'Which English Dialect would you like?',
         ('American', 'British')
     )
+
 
 
 # ---------------------
