@@ -23,7 +23,7 @@ This Level 1 LangChain app demonstrates a Retrieval-Augmented Generation (RAG) p
 1. Clone the repo and navigate into the project folder:
 
 ```bash
-cd level-1/02-basic-rag-application
+cd level-1/07-rag-basic
 ```
 
 ## 🔐 Setup Your OpenAI Key

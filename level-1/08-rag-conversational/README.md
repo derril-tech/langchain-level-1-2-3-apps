@@ -25,7 +25,7 @@ No frontend. No backend. Just pure Python, LangChain, and OpenAI.
 1. Clone the repo and navigate into the project:
 
    ```bash
-   cd level-1/01-conversational-rag
+   cd level-1/08-rag-conversational
    ```
 
 ````

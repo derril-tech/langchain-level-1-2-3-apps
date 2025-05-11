@@ -21,7 +21,8 @@ This Level 1 LangChain app demonstrates how to build a stateful chatbot using La
    ```bash
    cd level-1/01.1-advanced-chatbot-memory
    ```
-   ## 🔐 Setup Your OpenAI Key
+
+## 🔐 Setup Your OpenAI Key
 
 Create a `.env` file and add your OpenAI API key:
 

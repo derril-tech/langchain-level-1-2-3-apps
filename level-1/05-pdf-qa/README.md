@@ -22,7 +22,7 @@ This Level 1 LangChain app loads a PDF file, splits it into chunks, stores them 
 1. Clone the repository and navigate into the project directory:
 
    ```bash
-   cd level-1/02-pdf-qa
+   cd level-1/05-pdf-qa
    ```
 
    ***

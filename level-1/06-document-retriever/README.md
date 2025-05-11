@@ -26,7 +26,7 @@ No frontend, no backend — just pure LangChain + Python + ChromaDB.
 1. Clone the repository and navigate into the project folder:
 
    ```bash
-   cd level-1/langchain-vector-search-gpt4o
+   cd level-1/06-document-retriever
    ```
 
 ---

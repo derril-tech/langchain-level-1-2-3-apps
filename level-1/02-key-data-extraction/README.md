@@ -24,15 +24,13 @@ No frontend, no backend — just pure LangChain + OpenAI via Python.
    cd level-1/02-key-data-extraction
    ```
 
-````
-
 ## 🔐 Setup Your OpenAI Key
 
 Create a `.env` file and add your OpenAI API key:
 
 ```env
 OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxx
-````
+```
 
 ## ▶️ Run the Extraction app
 

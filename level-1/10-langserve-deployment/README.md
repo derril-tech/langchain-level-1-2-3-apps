@@ -1,41 +1,39 @@
-# 📦 LangServe Deployment Demo
+# 🧠 01 - LangServe Translator App
 
-## 📘 Description
-
-This project demonstrates how to deploy a LangChain app as an API using LangServe. The app exposes a basic LLMChain through a REST interface so you can interact with it via HTTP requests.
+This Level 1 LangChain app is a basic translation prototype using OpenAI's GPT-4o model. It showcases how to deploy a LangChain app using **LangServe**, with an interactive browser-based playground. No frontend or backend needed — just pure LangChain, FastAPI, and Python.
 
 ---
 
-## 🧠 LangChain Concepts Used
+## 🧩 Concepts Used
 
-- LLMChain
-- PromptTemplate
-- LangServe
-- FastAPI Integration
+- **ChatOpenAI** (gpt-4o-2024-08-06)
+- **ChatPromptTemplate**
+- **StrOutputParser**
+- **LangChain Runnable Syntax**
+- **LangServe**
+- **FastAPI**
+- **Uvicorn**
+- **.env Loading with python-dotenv**
 
 ---
 
 ## ▶️ How to Run
 
-Make sure your virtual environment is activated and dependencies are installed.
+1. Clone the repo and navigate into the project:
 
 ```bash
 cd level-1/10-langserve-deployment
-python main.py
 ```
 
-Once the server starts, open your browser at:
+2. (Optional) Create and activate a virtual environment:
 
 ```bash
-http://localhost:8000/docs
+python -m venv venv
+source venv/bin/activate  # or venv\Scripts\activate on Windows
+```
 
+3. Install dependencies:
 
----
-
-## 🔧 Setup Notes
-
-This project is part of the [LangChain Level 1 Apps](../../README.md).
-No frontend or backend — just pure LangChain and Python.
-
----
+```bash
+pip install -r requirements.txt
 ```
