@@ -62,10 +62,10 @@ col1, col2 = st.columns(2)
 
 with col1:
     st.markdown("Extract the following from a product review:")
-    st.markdown("- Sentiment\n- How long took it to deliver?\n- How was its price perceived?")
+    st.markdown("- Sentiment\n- How long did it take to deliver?\n- How was the price perceived?")
 
 with col2:
-    st.write("Contact [AI Accelera](https://aiaccelera.com) to build your AI Projects")
+    st.write("\nContact [Derril Filemon](www.linkedin.com/in/derril-filemon-a31715319) to build your AI Projects")
 
 # -------------------------
 # Input: OpenAI API Key
