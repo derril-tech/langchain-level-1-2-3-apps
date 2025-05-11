@@ -1,6 +1,6 @@
 # 🧠 02 - Text Rewriter with Tone & Dialect Control
 
-[👉 Try the Live Demo](https://langchain-level-1-2-3-apps-q75wp2a2etewd8swerkmad.streamlit.app/)
+[👉 Try the Live Demo](https://langchain-level-1-2-3-apps-ak6cubnazycyjyxjex6a5n.streamlit.app/)
 
 This Level 2 LangChain app allows users to rewrite informal or unclear text into more polished versions using different tones and dialects — powered by OpenAI’s GPT-4o.
 
