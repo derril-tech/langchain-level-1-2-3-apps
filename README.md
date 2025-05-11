@@ -76,7 +76,8 @@ This repository is organized into three folders:
 
 | #  | Project Name                         | Link                                               |
 |----|--------------------------------------|----------------------------------------------------|
-| 1  | Chatbot with Memory                  | [📄 README](./level-1/01-chatbot-memory/README.md)         |
+| 1  | Chatbot with Memory | [📄 README](./level-1/01-chatbot-memory/README.md) |
+
 | 2  | Data Extraction Tool                 | [📄 README](./level-1/02-data-extraction/README.md)         |
 | 3  | Sentiment & Political Bias Analyzer | [📄 README](./level-1/03-sentiment-bias-analyzer/README.md) |
 | 4  | Database QA System                  | [📄 README](./level-1/04-database-qa/README.md)             |
