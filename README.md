@@ -97,9 +97,10 @@ This repository is organized into three folders:
 
 > Proof of Concept apps with UI/API layers
 
-| #   | Project Name   | Link                                              |
-| --- | -------------- | ------------------------------------------------- |
-| 1   | Text Re-writer | [📄 README](./level-2/01-text-rewriter/README.md) |
+| #   | Project Name        | Link                                                    |
+| --- | ------------------- | ------------------------------------------------------- |
+| 1   | Text Re-writer      | [📄 README](./level-2/01-text-rewriter/README.md)       |
+| 2   | Blog Post Generator | [📄 README](./level-2/02-blog-post-generator/README.md) |
 
 ---
 

@@ -24,7 +24,7 @@ Built with a clean Streamlit UI, this prototype demonstrates real-world prompt e
 
 ```bash
 git clone https://github.com/derril-tech/langchain-level-1-2-3-apps.git
-cd langchain-level-1-2-3-apps/level-2/text-rewriter
+cd langchain-level-1-2-3-apps/level-2/01-text-rewriter
 ```
 
 2. (Optional) Create and activate a virtual environment:
