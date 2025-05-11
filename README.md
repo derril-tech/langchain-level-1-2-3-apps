@@ -147,7 +147,7 @@ python main.py
 
 ---
 
-## 📌 Coming Soon
+
 
 
 
