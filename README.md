@@ -101,6 +101,7 @@ This repository is organized into three folders:
 | --- | ------------------- | ------------------------------------------------------- |
 | 1   | Text Re-writer      | [📄 README](./level-2/01-text-rewriter/README.md)       |
 | 2   | Blog Post Generator | [📄 README](./level-2/02-blog-post-generator/README.md) |
+| 3   | TXT file summarizer | [📄 README](./level-2/03-txt-file-summarizer/README.md) |
 
 ---
 

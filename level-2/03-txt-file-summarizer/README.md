@@ -1,6 +1,6 @@
 # 📄 03 - AI Long Text Summarizer (TXT File)
 
-[👉 Try the Live Demo](https://langchain-level-1-2-3-apps-q75wp2a2etewd8swerkmad.streamlit.app/)
+[👉 Try the Live Demo](https://langchain-level-1-2-3-apps-6wjnccdrjksrnu8uowdskg.streamlit.app/)
 
 This Level 2 LangChain app allows users to upload a `.txt` file and instantly generate a high-quality summary of its contents using GPT-4o.
 
