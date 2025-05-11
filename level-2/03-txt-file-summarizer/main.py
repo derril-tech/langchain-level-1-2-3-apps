@@ -39,7 +39,7 @@ with col1:
     st.markdown("🚀 ChatGPT can't summarize long texts easily. Now you can do it with this app using LangChain + GPT-4o!")
 
 with col2:
-    st.write("💼 Built by [Derril Filemon](www.linkedin.com/in/derril-filemon-a31715319) — Let’s build your next AI project together!")
+    st.write("💼 Built by [Derril Filemon](www.linkedin.com/in/derril-filemon-a31715319)")
 
 # ============================ #
 #       API KEY SECTION       #
