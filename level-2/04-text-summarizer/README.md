@@ -1,6 +1,6 @@
 # 🧠 01 - Text Summarizer with LangChain + GPT-4o
 
-[👉 Try the Live Demo](https://langchain-level-1-2-3-apps-q75wp2a2etewd8swerkmad.streamlit.app/)
+[👉 Try the Live Demo](https://langchain-level-1-2-3-apps-49mp6omqdwbwsaosrxlach.streamlit.app/)
 
 This Level 2 LangChain app summarizes long-form text into short, digestible summaries using GPT-4o.
 
