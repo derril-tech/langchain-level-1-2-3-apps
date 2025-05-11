@@ -98,17 +98,18 @@ if len(draft_input.split(" ")) > 700:
 # ---------------------
 # Get tone and dialect preferences
 # ---------------------
-col1, col2 = st.columns(2)
-with col1:
+col3, col4 = st.columns(2)
+with col3:
     option_tone = st.selectbox(
         'Which tone would you like your redaction to have?',
         ('Formal', 'Informal')
     )
-with col2:
+with col4:
     option_dialect = st.selectbox(
         'Which English Dialect would you like?',
         ('American', 'British')
     )
+
 
 # ---------------------
 # Generate and display rewritten text
@@ -140,38 +141,36 @@ if draft_input:
     st.write(improved_redaction)
 
 # =========================
-#  Notes
+# Teaching Notes (For Developers Only — Not Rendered in App)
 # =========================
 
-"""
-BEGINNER NOTES:
-
-1. Streamlit:
-   Streamlit is a Python tool for building web apps using simple Python scripts. Great for prototyping!
-
-2. LangChain:
-   LangChain helps manage prompts, language model logic, and integrations with LLMs like GPT-4o.
-
-3. PromptTemplate:
-   This lets you insert variables (like draft text, tone, dialect) into a reusable prompt.
-
-4. OpenAI LLM (GPT-4o):
-   A powerful language model. We access it using the `OpenAI()` class, and it needs your API key.
-
-5. load_LLM():
-   A helper function that creates the LLM instance with your OpenAI API key and chosen randomness level (`temperature=0.7`).
-
-6. st.text_area(), st.selectbox(), etc.:
-   These are Streamlit UI elements that let users type input, pick dropdown options, and see results.
-
-7. prompt.format():
-   Replaces `{draft}`, `{tone}`, and `{dialect}` in the prompt with your actual values to prepare the final input for GPT-4o.
-
-8. Why check word limits?
-   GPT-4o (or any OpenAI model) has token limits. Keeping user inputs short helps prevent errors and keeps the app responsive.
-
-TIP:
-- Always start with small inputs and test.
-- Read prompt responses carefully.
-- Fine-tune the template for your specific use case.
-"""
+# BEGINNER NOTES:
+#
+# 1. Streamlit:
+#    Streamlit is a Python tool for building web apps using simple Python scripts. Great for prototyping!
+#
+# 2. LangChain:
+#    LangChain helps manage prompts, language model logic, and integrations with LLMs like GPT-4o.
+#
+# 3. PromptTemplate:
+#    This lets you insert variables (like draft text, tone, dialect) into a reusable prompt.
+#
+# 4. OpenAI LLM (GPT-4o):
+#    A powerful language model. We access it using the `OpenAI()` class, and it needs your API key.
+#
+# 5. load_LLM():
+#    A helper function that creates the LLM instance with your OpenAI API key and chosen randomness level (`temperature=0.7`).
+#
+# 6. st.text_area(), st.selectbox(), etc.:
+#    These are Streamlit UI elements that let users type input, pick dropdown options, and see results.
+#
+# 7. prompt.format():
+#    Replaces `{draft}`, `{tone}`, and `{dialect}` in the prompt with your actual values to prepare the final input for GPT-4o.
+#
+# 8. Why check word limits?
+#    GPT-4o (or any OpenAI model) has token limits. Keeping user inputs short helps prevent errors and keeps the app responsive.
+#
+# TIP:
+# - Always start with small inputs and test.
+# - Read prompt responses carefully.
+# - Fine-tune the template for your specific use case.
