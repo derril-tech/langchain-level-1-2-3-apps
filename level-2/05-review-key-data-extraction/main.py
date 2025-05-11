@@ -65,7 +65,7 @@ with col1:
     st.markdown("- Sentiment\n- How long did it take to deliver?\n- How was the price perceived?")
 
 with col2:
-    st.write("\nContact [Derril Filemon](www.linkedin.com/in/derril-filemon-a31715319) to build your AI Projects")
+    st.write("\nContact [Derril Filemon](https://www.linkedin.com/in/derril-filemon-a31715319) to build your AI Projects")
 
 # -------------------------
 # Input: OpenAI API Key

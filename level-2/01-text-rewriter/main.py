@@ -60,7 +60,7 @@ col1, col2 = st.columns(2)
 with col1:
     st.markdown("Re-write your text in different styles.")
 with col2:
-    st.write("Contact [Derril Filemon](www.linkedin.com/in/derril-filemon-a31715319) to build your AI Projects.")
+    st.write("Contact [Derril Filemon](https://www.linkedin.com/in/derril-filemon-a31715319) to build your AI Projects.")
 
 # ---------------------
 # Get OpenAI API key input from the user
