@@ -1,6 +1,6 @@
 # 📝 Blog Post Generator with Streamlit + LangChain
 
-[👉 Try the Live Demo](https://langchain-level-1-2-3-apps-nx2klql8fnappv29v3evy2b.streamlit.app/) <!-- Replace with actual link if needed -->
+[👉 Try the Live Demo](https://langchain-level-1-2-3-apps-md8vrievqfnizxltkn6rqm.streamlit.app/) <!-- Replace with actual link if needed -->
 
 This Level 2 LangChain app allows users to generate a complete 400-word blog post by simply entering a topic. It’s powered by OpenAI’s `gpt-4o` model and demonstrates real-world use of LangChain’s prompt templating inside a clean and responsive Streamlit interface.
 
