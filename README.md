@@ -97,15 +97,14 @@ This repository is organized into three folders:
 
 > Proof of Concept apps with UI/API layers
 
-| #   | Project Name              | Link                                                           |
-| --- | ------------------------- | -------------------------------------------------------------- |
-| 1   | Text Re-writer            | [📄 README](./level-2/01-text-rewriter/README.md)              |
-| 2   | Blog Post Generator       | [📄 README](./level-2/02-blog-post-generator/README.md)        |
-| 3   | TXT file summarizer       | [📄 README](./level-2/03-txt-file-summarizer/README.md)        |
-| 4   | Text Summarizer           | [📄 README](./level-2/04-text-summarizer/README.md)            |
-| 5   | Review key data extractor | [📄 README](./level-2/05-review-key-data-extraction/README.md) |
-
-     | [📄 README](./level-2/04-text-summarizer/README.md)     |
+| #   | Project Name               | Link                                                           |
+| --- | -------------------------- | -------------------------------------------------------------- |
+| 1   | Text Re-writer             | [📄 README](./level-2/01-text-rewriter/README.md)              |
+| 2   | Blog Post Generator        | [📄 README](./level-2/02-blog-post-generator/README.md)        |
+| 3   | TXT file summarizer        | [📄 README](./level-2/03-txt-file-summarizer/README.md)        |
+| 4   | Text Summarizer            | [📄 README](./level-2/04-text-summarizer/README.md)            |
+| 5   | Review key data extractor  | [📄 README](./level-2/05-review-key-data-extraction/README.md) |
+| 6   | Quality-response-evaluator | [📄 README](./level-2/06-quality-response-evaluator/README.md) |
 
 ---
 

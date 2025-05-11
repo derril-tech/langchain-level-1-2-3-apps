@@ -1,6 +1,6 @@
 # 📊 01 - Quality of Response Evaluator for RAG Apps
 
-[👉 Try the Live Demo](https://langchain-level-1-2-3-apps-q75wp2a2etewd8swerkmad.streamlit.app/)
+[👉 Try the Live Demo](https://langchain-level-1-2-3-apps-dastrnv4zc5bc4zczqxr5q.streamlit.app/)
 
 This Level 2 LangChain app evaluates how well a RAG (Retrieval-Augmented Generation) application performs by comparing its answers to known correct responses — powered by GPT-4o.
 
