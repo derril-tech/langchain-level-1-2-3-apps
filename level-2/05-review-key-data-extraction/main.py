@@ -85,7 +85,7 @@ openai_api_key = get_openai_api_key()
 # -------------------------
 # Input: Product Review
 # -------------------------
-st.markdown("## Enter the Product Review")
+st.markdown("## Enter any Product Review")
 
 def get_review():
     return st.text_area(

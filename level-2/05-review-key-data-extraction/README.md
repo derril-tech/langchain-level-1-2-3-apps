@@ -1,6 +1,6 @@
 # 🛒 01 - Key Info Extractor from Product Reviews
 
-[👉 Try the Live Demo](https://langchain-level-2-product-review-extractor.streamlit.app/)
+[👉 Try the Live Demo](https://langchain-level-1-2-3-apps-aue3nufvmhvu7vkuahrhcx.streamlit.app/)
 
 This Level 2 LangChain app extracts structured insights from user-written product reviews on e-commerce platforms like Amazon. With just a single pasted review, it can identify **sentiment**, **delivery time**, and **price perception** using OpenAI’s GPT-4o model.
 
