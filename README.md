@@ -1,5 +1,5 @@
 
-# 🚀 LangChain Level 1 Applications
+# 🚀 LangChain Level 1, 2 and 3 Applications
 
 This repository showcases **Level 1 LangChain Projects** — standalone applications built purely with LangChain, without any frontend or backend integration.
 
@@ -58,8 +58,8 @@ python main.py
 ### 1. Clone the Repo
 
 ```bash
-git clone https://github.com/derril-tech/langchain-level-1-apps.git
-cd langchain-level-1-apps
+git clone https://github.com/derril-tech/langchain-level-1-2-3-apps.git
+
 ```
 ### 2. Create Virtual Environment
 
@@ -95,8 +95,5 @@ python main.py
 
 ## 📌 Coming Soon
 
-Stay tuned for:
 
-- 🧩 **Level 2 Projects** – LangChain + UI/API integrations  
-- 🧠 **Level 3 Projects** – Multi-agent systems and production-ready workflows
 
