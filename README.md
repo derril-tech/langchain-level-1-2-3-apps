@@ -53,7 +53,7 @@ Best for portfolio-ready, scalable solutions.
 
 ## 🧪 How to Run Each App
 
-1. Navigate to any project inside the `/level-1/` folder.
+1. Navigate to any project inside the `/level-1/`, `/level-2/` or `/level-3/` folder.
 2. Follow the instructions in its own `README.md` to run it.
 3. Run the Python file directly:
 
