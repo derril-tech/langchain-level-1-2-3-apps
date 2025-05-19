@@ -6,23 +6,15 @@ from fastapi.responses import PlainTextResponse
 from starlette.exceptions import HTTPException as StarletteHTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
-# routers: comment out next line till create them
-from routers import pdfs
-
+from routers import pdfs  # Enable your PDF router
 import config
 
 app = FastAPI()
 
-# router: comment out next line till create it
+# Include your routers
 app.include_router(pdfs.router)
 
-
-#origins = [
-#    "http://localhost:3000",
-#    "https://todo-frontend-khaki.vercel.app/",
-#]
-
-# CORS configuration, needed for frontend development
+# Enable CORS
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -31,25 +23,22 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
-# global http exception handler, to handle errors
+# Global exception handler
 @app.exception_handler(StarletteHTTPException)
 async def http_exception_handler(request, exc):
     print(f"{repr(exc)}")
     return PlainTextResponse(str(exc.detail), status_code=exc.status_code)
 
-# to use the settings
+# Dependency-injected settings
 @lru_cache()
 def get_settings():
     return config.Settings()
 
-
+# Root route using settings
 @app.get("/")
 def read_root(settings: config.Settings = Depends(get_settings)):
-    # print the app_name configuration
-    print(settings.app_name)
-    return "Hello PDF World"
-
+    print(settings.APP_NAME)
+    return {"message": "Hello PDF World!"}
 
 @app.get("/items/{item_id}")
 def read_item(item_id: int, q: Union[str, None] = None):

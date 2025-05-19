@@ -6,15 +6,19 @@ from google.cloud import storage
 load_dotenv()
 
 class Settings:
-    DATABASE_HOST = os.getenv("DATABASE_HOST")
-    DATABASE_NAME = os.getenv("DATABASE_NAME")
-    DATABASE_USER = os.getenv("DATABASE_USER")
-    DATABASE_PASSWORD = os.getenv("DATABASE_PASSWORD")
-    DATABASE_PORT = int(os.getenv("DATABASE_PORT", "5432"))
-    APP_NAME = os.getenv("APP_NAME", "Full Stack PDF CRUD App")
-    GCP_CREDENTIALS_PATH = os.getenv("GOOGLE_APPLICATION_CREDENTIALS", "secrets/gcs-key.json")
-    GCP_BUCKET_NAME = os.getenv("GCP_BUCKET_NAME")
+    def __init__(self):
+        self.DATABASE_HOST = os.getenv("DATABASE_HOST")
+        self.DATABASE_NAME = os.getenv("DATABASE_NAME")
+        self.DATABASE_USER = os.getenv("DATABASE_USER")
+        self.DATABASE_PASSWORD = os.getenv("DATABASE_PASSWORD")
+        self.DATABASE_PORT = int(os.getenv("DATABASE_PORT", "5432"))
+        self.APP_NAME = os.getenv("APP_NAME", "Full Stack PDF CRUD App")
+        self.GCP_CREDENTIALS_PATH = os.getenv("GOOGLE_APPLICATION_CREDENTIALS", "secrets/gcs-key.json")
+        self.GCP_BUCKET_NAME = os.getenv("GCP_BUCKET_NAME")
 
     @staticmethod
     def get_gcs_client():
-        return storage.Client.from_service_account_json(Settings.GCP_CREDENTIALS_PATH)
+        return storage.Client.from_service_account_json(
+            os.getenv("GOOGLE_APPLICATION_CREDENTIALS", "secrets/gcs-key.json")
+        )
+
