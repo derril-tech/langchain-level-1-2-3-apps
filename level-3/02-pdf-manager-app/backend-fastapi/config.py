@@ -18,7 +18,7 @@ class Settings:
 
     @staticmethod
     def get_gcs_client():
-        return storage.Client.from_service_account_json(
-            os.getenv("GOOGLE_APPLICATION_CREDENTIALS", "secrets/gcs-key.json")
-        )
+        credentials_path = os.getenv("GOOGLE_APPLICATION_CREDENTIALS", "secrets/gcs-key.json")
+        return storage.Client.from_service_account_json(credentials_path)
+
 
