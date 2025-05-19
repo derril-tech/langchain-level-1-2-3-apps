@@ -18,7 +18,13 @@ class Settings:
 
     @staticmethod
     def get_gcs_client():
+        import os
+        from google.cloud import storage
+
+        # Load path from env var (Render sets this)
         credentials_path = os.getenv("GOOGLE_APPLICATION_CREDENTIALS", "secrets/gcs-key.json")
+        print("📁 Using GCS creds path:", credentials_path)
+
         return storage.Client.from_service_account_json(credentials_path)
 
 
