@@ -91,6 +91,7 @@ export default function PdfList() {
 
     const formData = new FormData();
     formData.append("file", selectedFile);
+    formData.append("file_name", selectedFile.name); // ✅ ADD THIS LINE
 
     const response = await fetch(
       process.env.NEXT_PUBLIC_API_URL + "/pdfs/upload",
