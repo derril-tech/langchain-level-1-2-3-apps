@@ -5,21 +5,29 @@ from config import Settings
 from google.cloud import storage
 from google.api_core.exceptions import GoogleAPIError
 
+
 def create_pdf(db: Session, pdf: schemas.PDFRequest):
     db_pdf = models.PDF(name=pdf.name, selected=pdf.selected, file=pdf.file)
     db.add(db_pdf)
     db.commit()
     db.refresh(db_pdf)
-    return db_pdf
+    return schemas.PDFResponse.from_orm(db_pdf)
+
 
 def read_pdfs(db: Session, selected: bool = None):
     if selected is None:
-        return db.query(models.PDF).all()
+        pdfs = db.query(models.PDF).all()
     else:
-        return db.query(models.PDF).filter(models.PDF.selected == selected).all()
+        pdfs = db.query(models.PDF).filter(models.PDF.selected == selected).all()
+    return [schemas.PDFResponse.from_orm(pdf) for pdf in pdfs]
+
 
 def read_pdf(db: Session, id: int):
-    return db.query(models.PDF).filter(models.PDF.id == id).first()
+    pdf = db.query(models.PDF).filter(models.PDF.id == id).first()
+    if pdf:
+        return schemas.PDFResponse.from_orm(pdf)
+    return None
+
 
 def update_pdf(db: Session, id: int, pdf: schemas.PDFRequest):
     db_pdf = db.query(models.PDF).filter(models.PDF.id == id).first()
@@ -30,7 +38,8 @@ def update_pdf(db: Session, id: int, pdf: schemas.PDFRequest):
         setattr(db_pdf, key, value)
     db.commit()
     db.refresh(db_pdf)
-    return db_pdf
+    return schemas.PDFResponse.from_orm(db_pdf)
+
 
 def delete_pdf(db: Session, id: int):
     db_pdf = db.query(models.PDF).filter(models.PDF.id == id).first()
@@ -39,6 +48,7 @@ def delete_pdf(db: Session, id: int):
     db.delete(db_pdf)
     db.commit()
     return True
+
 
 def upload_pdf(db: Session, file: UploadFile, file_name: str):
     client = Settings.get_gcs_client()
@@ -54,10 +64,6 @@ def upload_pdf(db: Session, file: UploadFile, file_name: str):
         db.commit()
         db.refresh(db_pdf)
 
-        return schemas.PDFResponse.from_orm(db_pdf)  # ✅ Fix
+        return schemas.PDFResponse.from_orm(db_pdf)
     except GoogleAPIError as e:
         raise HTTPException(status_code=500, detail=f"GCS error: {str(e)}")
-
-
-
-
