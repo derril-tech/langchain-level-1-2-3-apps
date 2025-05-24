@@ -13,4 +13,4 @@ class PDFResponse(BaseModel):
     file: str
 
     class Config:
-        from_attributes = True
+        orm_mode = True  # ✅ enables from_orm()
