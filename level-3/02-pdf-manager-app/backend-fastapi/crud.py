@@ -47,9 +47,11 @@ def upload_pdf(db: Session, file: UploadFile, file_name: str):
 
     try:
         blob.upload_from_file(file.file, content_type=file.content_type)
-        # Make the file publicly accessible
-        blob.make_public()
-        file_url = blob.public_url
+
+        # ✅ No make_public() call — UBLA doesn't allow it
+        # You can generate signed URLs later if public access is needed
+
+        file_url = f"https://storage.googleapis.com/{bucket.name}/{file_name}"  # direct path
 
         db_pdf = models.PDF(name=file.filename, selected=False, file=file_url)
         db.add(db_pdf)
