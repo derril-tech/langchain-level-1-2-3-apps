@@ -1,6 +1,6 @@
 from typing import List
 from sqlalchemy.orm import Session
-from fastapi import APIRouter, Depends, HTTPException, status, UploadFile, File
+from fastapi import APIRouter, Depends, HTTPException, status, UploadFile, File, Form
 import schemas
 import crud
 from database import SessionLocal
@@ -19,9 +19,21 @@ def get_db():
 def create_pdf(pdf: schemas.PDFRequest, db: Session = Depends(get_db)):
     return crud.create_pdf(db, pdf)
 
+"""
 @router.post("/upload", response_model=schemas.PDFResponse, status_code=status.HTTP_201_CREATED)
 def upload_pdf(file: UploadFile = File(...), db: Session = Depends(get_db)):
     file_name = f"{uuid4()}-{file.filename}"
+    return crud.upload_pdf(db, file, file_name)
+
+"""
+
+
+@router.post("/upload", response_model=schemas.PDFResponse, status_code=status.HTTP_201_CREATED)
+def upload_pdf(
+    file: UploadFile = File(...),
+    file_name: str = Form(...),
+    db: Session = Depends(get_db)
+):
     return crud.upload_pdf(db, file, file_name)
 
 @router.get("", response_model=List[schemas.PDFResponse])
