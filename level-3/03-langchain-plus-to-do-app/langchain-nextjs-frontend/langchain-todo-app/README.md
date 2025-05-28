@@ -1,6 +1,6 @@
 # ✅ 03 - LangChain To-Do App with OpenAI Integration
 
-[👉 Try the Live Demo](https://langchain-level-1-2-3-apps-your-app-link-goes-here.streamlit.app/)
+[👉 Try the Live Demo](https://langchain-level-1-2-3-apps-8ub4.vercel.app/)
 
 This Level 3 LangChain app enhances a full-stack To-Do application with OpenAI's language capabilities. Built with a FastAPI backend and a Next.js frontend, it allows users to go beyond basic task management by leveraging LLM features like **automatic text summarization** and **poem generation** from to-do items.
 
@@ -38,7 +38,7 @@ pyenv activate todo-venv
 3. Install backend dependencies:
 
 ```bash
-cd 001-langchain-fastapi-backend
+cd langchain-fastapi-backend
 pip install -r requirements.txt
 ```
 
@@ -70,14 +70,14 @@ OPENAI_API_KEY=sk-your-key-here
 1. Launch the backend server:
 
 ```bash
-cd 001-langchain-fastapi-backend
+cd langchain-fastapi-backend
 uvicorn main:app --reload
 ```
 
 2. Launch the frontend app:
 
 ```bash
-cd ../../002-langchain-nextjs-frontend/langchain-todo-app
+cd ../../langchain-nextjs-frontend/langchain-todo-app
 npm run dev
 ```
 
@@ -106,13 +106,13 @@ LangChain and OpenAI features are wired into specific routes (`/summarize-text`,
 
 ```text
 langchain-todo-app/
-├── 001-langchain-fastapi-backend/     # FastAPI + LangChain backend
+├── langchain-fastapi-backend/     # FastAPI + LangChain backend
 │   ├── routers/todos.py               # Summarization & poem routes
 │   ├── crud.py                        # Database interactions
 │   ├── main.py                        # FastAPI app entry
 │   └── .env                           # OpenAI key goes here
 │
-├── 002-langchain-nextjs-frontend/     # Next.js frontend app
+├── langchain-nextjs-frontend/     # Next.js frontend app
 │   └── langchain-todo-app/
 │       ├── components/todo.js         # Poem UI logic & API integration
 │       ├── styles/todo.module.css     # Styled poem popup
