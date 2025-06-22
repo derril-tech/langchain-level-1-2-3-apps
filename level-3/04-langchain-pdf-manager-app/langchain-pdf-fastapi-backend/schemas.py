@@ -13,7 +13,7 @@ class PDFResponse(BaseModel):
     file: str
 
     class Config:
-        orm_mode = True  # ✅ Enables from_orm() for SQLAlchemy models
+        from_attributes = True
 
 # ✅ For PDF Question Answering
 class QuestionRequest(BaseModel):
