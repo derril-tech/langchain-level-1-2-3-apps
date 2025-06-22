@@ -1,3 +1,6 @@
+from dotenv import load_dotenv
+load_dotenv()
+
 import os
 from google.cloud import storage
 from pydantic_settings import BaseSettings

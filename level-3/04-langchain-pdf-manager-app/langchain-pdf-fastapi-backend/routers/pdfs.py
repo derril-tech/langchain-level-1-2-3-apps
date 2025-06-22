@@ -1,27 +1,38 @@
 from typing import List
+
+# === LangChain + OpenAI (Plugin-based) Imports ===
+from langchain_openai import OpenAI, OpenAIEmbeddings
+from langchain_core.prompts import PromptTemplate
+from langchain.chains.llm import LLMChain
+from langchain.chains.retrieval_qa.base import RetrievalQA
+
+# === LangChain Community Components ===
+from langchain_community.vectorstores import FAISS
+from langchain_community.document_loaders.pdf import PyPDFLoader
+
+# === LangChain Text Processing ===
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+
+# === Pydantic schema for question-based endpoint ===
+from schemas import QuestionRequest
+
+
 from sqlalchemy.orm import Session
 from fastapi import APIRouter, Depends, HTTPException, status, UploadFile, File, Form
 import schemas
 import crud
 from database import SessionLocal
+
 from uuid import uuid4
 
-# LangChain Imports
-from langchain import OpenAI, PromptTemplate
-from langchain.chains import LLMChain
-from langchain.document_loaders import PyPDFLoader
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.embeddings.openai import OpenAIEmbeddings
-from langchain.vectorstores import FAISS
-from langchain.chains import RetrievalQA
-from schemas import QuestionRequest
+# === Instantiate Language Models ===
+llm = OpenAI()  # Used in RetrievalQA
+langchain_llm = OpenAI(temperature=0)  # Used in summarization
 
-# LLM instance
-llm = OpenAI()
-langchain_llm = OpenAI(temperature=0)
-
+# === API Router for /pdfs endpoints ===
 router = APIRouter(prefix="/pdfs")
 
+# === Dependency Injection for DB Session ===
 def get_db():
     db = SessionLocal()
     try:
@@ -67,7 +78,7 @@ def delete_pdf(id: int, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="PDF not found")
     return {"message": "PDF successfully deleted"}
 
-# === LangChain Summarization ===
+# === LangChain Summarization Route ===
 
 summarize_template_string = """
         Provide a summary for the following text:
@@ -89,24 +100,26 @@ async def summarize_text(text: str):
     summary = summarize_chain.run(text=text)
     return {'summary': summary}
 
-# === LangChain PDF QA ===
+# === LangChain PDF Q&A Route ===
 
 @router.post("/qa-pdf/{id}")
 def qa_pdf_by_id(id: int, question_request: QuestionRequest, db: Session = Depends(get_db)):
     pdf = crud.read_pdf(db, id)
     if pdf is None:
         raise HTTPException(status_code=404, detail="PDF not found")
-    
-    print(pdf.file)
+
+    # Load PDF and chunk it
     loader = PyPDFLoader(pdf.file)
     document = loader.load()
 
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=3000, chunk_overlap=400)
     document_chunks = text_splitter.split_documents(document)
 
+    # Embed and store chunks
     embeddings = OpenAIEmbeddings()
     stored_embeddings = FAISS.from_documents(document_chunks, embeddings)
 
+    # Setup Retrieval QA chain
     QA_chain = RetrievalQA.from_chain_type(
         llm=llm,
         chain_type="stuff",
