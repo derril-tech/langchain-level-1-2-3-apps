@@ -16,13 +16,14 @@ app.include_router(pdfs.router)
 
 origins = [
     "http://localhost:3000",       # Local dev
-    "https://pdf-manager-app.vercel.app",  # Prod (optional)
+    "https://pdf-manager-app.vercel.app",  # Optional for future deployment
+    
 ]
 
 # === CORS Configuration (dev & prod ready) ===
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # In production, replace "*" with specific domains
+    allow_origins=origins,  # In production, replace "*" with specific domains
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
