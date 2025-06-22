@@ -56,14 +56,28 @@ def upload_pdf(db: Session, file: UploadFile, file_name: str):
     blob = bucket.blob(file_name)
 
     try:
+        # Upload the file to GCS
         blob.upload_from_file(file.file, content_type=file.content_type)
+
+        # ✅ Make the file publicly accessible
+        blob.make_public()
+
+        # Build the public URL
         file_url = f"https://storage.googleapis.com/{bucket.name}/{file_name}"
 
+        # Save metadata in DB
         db_pdf = models.PDF(name=file.filename, selected=False, file=file_url)
         db.add(db_pdf)
         db.commit()
         db.refresh(db_pdf)
 
         return schemas.PDFResponse.from_orm(db_pdf)
+
     except GoogleAPIError as e:
         raise HTTPException(status_code=500, detail=f"GCS error: {str(e)}")
+
+    # --- Original version without public access ---
+    # blob.upload_from_file(file.file, content_type=file.content_type)
+    # file_url = f"https://storage.googleapis.com/{bucket.name}/{file_name}"
+    # (No .make_public() here)
+
