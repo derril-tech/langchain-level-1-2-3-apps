@@ -39,7 +39,6 @@
   margin-top: 20px;
 }
 
-
 .loadBtn {
   background: none;
   border: 1px solid #ccc;
@@ -60,4 +59,42 @@
 .filterActive {
   text-decoration: underline;
   color: blue;
+}
+
+.questionSection {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+}
+
+.questionInput {
+  padding: 8px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.askBtn {
+  background: #0070f3;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  margin-top: 10px;
+}
+
+.askBtn:hover {
+  background-color: #005ac1;
+}
+
+.answerBox {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 6px;
+  margin-top: 16px;
+  white-space: pre-wrap;
 }
