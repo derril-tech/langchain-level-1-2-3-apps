@@ -14,6 +14,11 @@ app = FastAPI()
 # === Register API Routers ===
 app.include_router(pdfs.router)
 
+origins = [
+    "http://localhost:3000",       # Local dev
+    "https://pdf-manager-app.vercel.app",  # Prod (optional)
+]
+
 # === CORS Configuration (dev & prod ready) ===
 app.add_middleware(
     CORSMiddleware,
