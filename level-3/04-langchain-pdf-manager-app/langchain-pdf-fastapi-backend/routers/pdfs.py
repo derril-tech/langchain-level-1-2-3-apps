@@ -128,4 +128,4 @@ def qa_pdf_by_id(id: int, question_request: QuestionRequest, db: Session = Depen
 
     question = question_request.question
     answer = QA_chain.run(question)
-    return answer
+    return { "answer": answer }

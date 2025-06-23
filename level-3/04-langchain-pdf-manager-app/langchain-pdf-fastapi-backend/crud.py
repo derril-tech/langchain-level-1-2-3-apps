@@ -80,4 +80,9 @@ def upload_pdf(db: Session, file: UploadFile, file_name: str):
     # blob.upload_from_file(file.file, content_type=file.content_type)
     # file_url = f"https://storage.googleapis.com/{bucket.name}/{file_name}"
     # (No .make_public() here)
+    #----------------------------
+    # Why This Works:
+#blob.make_public() makes the uploaded file accessible via public link — exactly what PyPDFLoader() requires.
+
+#You preserve all the original logic in comments — just delete the line with .make_public() to revert back if needed.
 
