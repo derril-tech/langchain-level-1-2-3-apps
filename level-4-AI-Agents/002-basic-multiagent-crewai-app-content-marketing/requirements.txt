@@ -1,0 +1,12 @@
+# requirements.txt
+
+crewai==0.28.8
+crewai_tools==0.1.6
+langchain_openai>=0.0.6
+langchain_community>=0.0.29
+openai>=1.14.3
+
+# Compatible with CrewAI
+python-dotenv==1.0.0
+requests>=2.31.0
+beautifulsoup4>=4.12.2
