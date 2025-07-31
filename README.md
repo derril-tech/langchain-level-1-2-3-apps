@@ -5,6 +5,7 @@ This repository showcases real-world LangChain applications built across three p
 - **Level 1 Projects** – standalone applications built purely with LangChain, without any frontend or backend integration
 - **Level 2 Projects** – LangChain + UI/API integrations using temporary frontends to test proof of concept
 - **Level 3 Projects** – full-stack production-grade applications using Next.js (Frontend on Vercel) and FastAPI (Backend on Render)
+- **Level 4 Projects** (Uppdated 2025) - AI Agent projects build with LangGraph and CrewAI
 
 These projects demonstrate how to evolve from simple command-line use cases to full-scale, deployable AI-powered systems.
 
