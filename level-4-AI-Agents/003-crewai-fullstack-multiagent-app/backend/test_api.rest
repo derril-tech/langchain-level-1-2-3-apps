@@ -1,0 +1,15 @@
+### 🚀 Create a CrewAI Job (POST)
+POST http://localhost:3001/api/multiagent
+Content-Type: application/json
+
+{
+  "technologies": ["Generative AI"],
+  "businessareas": ["Marketing"]
+}
+
+###
+
+### 📥 Check Job Status (GET)
+# ⬅️ Replace input_id with the one returned above
+GET http://localhost:3001/api/multiagent/replace-with-your-input-id
+

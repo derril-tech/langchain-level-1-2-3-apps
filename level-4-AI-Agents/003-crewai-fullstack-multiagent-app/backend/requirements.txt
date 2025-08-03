@@ -1,0 +1,8 @@
+flask
+flask-cors
+pydantic
+python-dotenv
+crewai==0.22.4
+crewai-tools==0.0.15
+langchain
+langchain-openai
